@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Trigger Clicked</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+  <h1>Click to Eat Sandwich</h1>
+  <h3 id="pbj">Peanut Butter &amp; Jelly</h3>
+  <h3 id="grilledcheese">Grilled Cheese</h3>
+  <h3 id="roastbeef">Roast Beef</h3>
+
+  <div id="sandwich-stats"></div>
+
+  <script type="text/javascript">
+
+    // This document.ready isn't necessary in this example... but is needed in cases where the HTML is complex.
+    // This code makes sure that the JavaScript doesn't get run until the HTML is finished loading
+    // It's useful to become familiar with now.
+
+    $(document).ready(function () {
+
+      // VARIABLES
+      // ====================================================================
+      // Here we create variables for tracking the number of sandwiches eaten
+      // ...
+      var pbjSandwichesEaten = 0;
+      var gcSandwichesEaten = 0;
+      var rbSandwichesEaten = 0;
+      var totalSandwichesEaten = 0;
+
+      // ...
+
+      // FUNCTIONS
+      // ====================================================================
+      // Here we create various on "click" functions which capture the clicks
+      // Inside each click event is the code to create an alert, update the counter, then show the updated count.
+      // ...
+
+
+      $("#pbj").on("click", function () {
+        pbjSandwichesEaten++;
+        totalSandwichesEaten++;
+        alert("The sandwich is rich, sweet, and just a little tart, but the peanut butter sticks to the roof of your mouth.");
+        alert("You've eaten " + pbjSandwichesEaten + " PB&J sandwiches");
+      });
+
+      $("#grilledcheese").on("click", function () {
+        gcSandwichesEaten++;
+        totalSandwichesEaten++;
+        alert("The buttery, cheesy sandwhich melts in your mouth. You can feel the calories coursing through you.");
+        alert("You've eaten " + gcSandwichesEaten + " grilled cheese sandwiches");
+      });
+
+      $("#roastbeef").on("click", function () {
+        rbSandwichesEaten++;
+        totalSandwichesEaten++;
+        alert("The sandwich is kind of dry and overall not very satisfying. Perhaps a fruity flavor, or some melted cheese would help...");
+        alert("You've eaten " + rbSandwichesEaten + " roastbeef sandwiches");
+      });
+      
+      var stats = 
+      "<h3> You've eaten...</h3>" +
+        "<p><b>Peanut Butter & Jelly:</b> " + pbjSandwichesEaten + "</p>" +
+        "<p><b>Grilled Cheese:</b> " + gcSandwichesEaten + "</p>" +
+        "<p><b>Roastbeef:</b> " + rbSandwichesEaten + "</p>" +
+        "<br/><p><b>Total sandwiches consumed:</b> " + totalSandwichesEaten + "</p>";
+      
+      $("#sandwich-stats").append(stats);
+
+      // ...
+
+    });
+
+    
+
+  </script>
+
+</body>
+
+</html>
