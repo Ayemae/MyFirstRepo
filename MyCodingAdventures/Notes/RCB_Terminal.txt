@@ -1,0 +1,19 @@
+TERMINAL SHORTCUTS
+
+rm : remove file
+
+rm -r : remove directory
+
+cd ~ : go to root directory
+
+cd .. : move up one directory
+
+mv : move file
+
+mv FILENAME1 FILENAME2 : Rename FILENAME1 to FILENAME2
+
+cp FILENAME1 DIRECTORY: copy file to directory 
+
+OPEN FILE
+(Mac) open FILENAME
+(Win) explorer FILENAME

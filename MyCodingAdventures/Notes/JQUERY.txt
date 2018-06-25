@@ -1,0 +1,74 @@
+JQUERY
+
+
+
+	jQuery is a javascript library!
+
+
+It's a collection of pre-built javascript functions.
+
+jQuery can be used for a variety of things, including such as downloading data from databases.
+
+You need to include jQuery's CDN tag to include it in your website --
+-- then utlize the specific jQuery selector ($) --
+-- finally, apply jQuery methods on the selected elements.
+
+
+You can use jQuery's selectors to select elements, classes, and ids.
+$("#an-id")  $("element")  $(".a-class")
+
+
+Here we are using jQuery's .HTML method to instantly select and change the contents of our empty-div.
+    $("#empty-div").html("<h1>Hello friends!</h1>");
+
+We can just as easily append a new line using a similarly simple .append method.
+    $("#empty-div").append("A pleasure to meet you!");
+ ^ ^ ^ (You can still put html tags in append) ^ ^ ^
+
+
+If we needed each line to be its own div, we could just as easily create a new div.
+    var newDiv = $("<div>");
+    newDiv.text("A pleasure to meet you!");
+newDiv will close the div by itself.
+The < > brackets here are dictating that we're creating a NEW element, not selecting an old one.
+
+
+    // We can then  append it to the other div using the same ".append" method.
+    $("#empty-div").append(newDiv);
+
+
+
+.html is equivalent to .innerHTML
+.append is equivalent to .textContent
+.attr is the equivalent of .newAttribute
+
+
+
+If we need to apply some CSS, we can quickly do so, using the jQuery ".attr" method.
+    newDiv.attr("class", "fancy");
+However, if you only provide one class, it's GETTING it rather than setting it.
+
+
+$(stuffYouWantToClear).empty(); -  will clear whatever you put inside.
+
+
+ ~ D O C U M E N T A T I O N ~
+It's good.
+
+
+Stick with minified when adding the CDN link.
+
+
+
+
+$(document).ready(function() {} - this waits for the html to finish loading before executing the script within
+
+
+if (state === "still") {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+      }
+      else if (state === "animate") {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+      }

@@ -1,0 +1,359 @@
+THTry re-doing the exercizes from class!
+
+Typing out the code will help you to understand the material, vs. c/p-ing.
+
+Javascript is used to add dynamic actions to a webpage.
+
+Variables are the nouns of programming.
+
+They are "things".  They are like containers you can store things into. (Numbers, Strings, Booleans, etc.)
+
+They are composed of variable names and values!
+
+"var" is the keyword for a variable.
+
+
+
+
+Strings have single or double quotes.  They include things like sentences.
+
+One equal sign is an ASSIGNMENT OPERATOR
+
+Your browser will compile your js code
+
+In an html page, js must be listed within a <script type="text/javascript"> tag
+
+Javascript doesn't care if you use single or double quotes
+
+S T R I N G S   A R E   T H E   S T U F F   I N   Q U O T E S  A L Y S S AAAAAA
+(ARRAYS ARE SOMETHING DIFFERENT)
+
+(Floating point?  Is that a decimal?)
+
+A javascript "alert" function will make an alert pop-up come up on your page.
+
+In order for us to get a variable inside of an alert, you need to concatinate (add) it.  Add the +!  
+ex: alert("Welcome " + name);
+
+Javascript has built-in functions, such as the aforementioned "alert".  FUNCTIONS take in ARGUMENTS.
+
+JAVASCRIPT DOESN'T DO ACCURATE MULTIPUCATION WITH DECIMALS!  Use math.js to do more accurate math!
+
+Looks like math.floor will also round out your decimals?
+
+
+
+
+console.log logs things to your browser console (Which you can see in Chrome's 'Inspect')
+Ex:
+
+console.log("This is a message that will be displayed to the console");
+
+Console.log is primarily used for debugging.
+
+You can also write js right into the browser console.
+
+
+
+Javascript is compiled when you actually run it!  It is a dynamic language!  
+It does NOTHING until whatever it's loaded it (ex a webpage) is run.
+This is why js will stop loading all subsequent code after a single error occurs.
+
+Semi-colons aren't necessary line-enders, but it's good ettiquette.
+
+
+
+CONFIRM - makes an alert pop up with "OK" and "Cancel" buttons 
+(those buttons cannot be edited to say anything else)
+
+var confirmInput = confirm("Will confirmInput be OK (true) or CANCEL (false)? You decide.");
+
+Will store what the user's answer (true/false) is within the variable "confirmInput".
+
+
+
+PROMPT - makes an alert pop with with a text box that the user can enter text content into
+
+var enteredPromptContent = prompt("The user will enter the content of this variable in the text box below.")
+(This will only ever get stored as a string.)
+
+Will store the user's answer within the variable "enteredPromptContent".
+
+
+PRINT - actually prompts user to print to a physical printer, so don't get it confused with PHP.  :P
+
+
+
+
+
+document.write is what writes stuff to the webpage.
+
+
+
+When doing if/else statements in js, use "if" first, "else if" for any conditions in the middle, 
+and the final 
+
+// If the user likes sushi (confirmSushi === true), we run the following block of code.
+      if (confirmSushi) {
+        alert("You like " + sushiType + "!");
+      }
+      // If the user likes ginger tea (confirmGingerTea === true), we run the following block of code.
+      else if (confirmGingerTea) {
+        alert("You like ginger tea!!");
+      }
+      // If neither of the previous condition were true, we run the following block of code.
+      else {
+        document.write("You don't like sushi or ginger tea.");
+      }
+
+
+
+VARIABLES DECLARED WITH 'VAR' are accessible anywhere after its statement in the code.  
+This includes outside of any conditionals that it's within!
+
+
+
+TWO EQUAL SIGNS (==) means equal value, but not necessarily equal type (loose equality)
+
+THREE EQUAL SIGNS (===) means equal value AND equal type (strict equality)
+(You can't compare an integer to a string using this)
+Use strict equality (===) whenever possible
+
+Default value of a boolean is "true"?
+
+The plus sign (+) will concatinate/add things to strings at all times.  
+It is NOT used for math in strings
+
+
+
+ARRAYS are a collection of stuff.
+
+A square bracket ( [] ) determines an array!  This is true even if the array is empty!
+
+Each element of the array is marked by an index. Indexes always start with 0.
+
+You can put mixed types of items in an array.
+
+
+
+
+BASIC ARRAY INDICES:
+
+console.log(anArrayName.length); //grabs the total number of items in the array
+
+console.log(anArrayName[3]); //this grabs the 4th item in the array
+
+console.log(animals.indexOf("parrot"));  //grabs the index number of the item
+
+console.log(animals[animals.length - 1]); //grabs the LAST item in an array 
+(it's doing animals[] but using the length of the array as the index value, minus 1 since indexes start at 0)
+
+If you try to grab an item that doesn't exist, it will come back as "undefined"
+
+If js can't find the item in the array, it will return -1 (because 0 is occupied)
+
+if(anArray.indexOf(anInputVariable) !== -1) //will search anArray to see if anInputVariable exists within it
+
+
+in js, you execute a function by calling it with two parenthesis at the end:
+
+exampleFunction();
+
+
+
+"DRY" code = Don't Repeat Yourself
+
+in js, "for" denotes a loop
+
+
+      // Creating an array of vegetables.
+      var vegetables = ["Carrots", "Peas", "Lettuce", "Tomatoes"];
+
+      // Looping through each item in the array and logging a message to the console.
+      for (var i = 0; i < vegetables.length; i++) {
+        console.log("I love " + vegetables[i]);
+      }
+
+
+"var i = 0;" is defining a variable which we can use and the loop can adjust
+
+"i < vegetables.lenth;" is our condition which tells the code to keep going until the 
+speicified point.
+If that condition evaluates to true, it will run!  The condition is REQUIRED!
+
+"i++" is adding '1' to the value of i (for the index of the array, in this case).  The "i++" is called a
+POST-INCREMENT OPERATOR
+
+You can also use a PRE-INCREMENT OPERATOR.  It would be "++i"  Minus will work for these too.
+
+
+
+~2SPOOKY~
+Your browser has the ability to keep track of everything you do.
+
+
+
+FUNCTION:
+getElementByID  - will find a predefined html id element to apply to.
+
+
+Apply the javascript after the html, so that you can put a default into the html before 
+getElementByID changes the content.
+
+
+Anything that precedences the . is an OBJECT, for example:
+
+document.onkeyup
+
+"Document" is an object, "onkeyup" is a(n event) property.
+
+Math.random generates a value between 0 and 1.  
+It can be multiplied by a value to find a random number between that and 0.  It's often used with math.floor,
+which us used to round that number down to a whole.
+
+
+innerHTML will recognize and display HTML
+
+
+
+
+"function" is the function DECLARATION keyword.
+
+
+Arguments will go in the parentheses.  You can name the arguments whatever you like.
+
+
+Functions are containers for snippets of code.  :P
+
+
+
+Once js sees "return", it's just going to return the value and stop any subsequent code in the function.
+
+
+
+
+Javascript objects have curly brackets {} (on the RIGHT HAND SIDE, anyway)
+
+You can have Properties (KEYS!) and values that correspond to them in an object
+The values of properties are denoted by a colon :
+	(You can also use a dot.notation for this, to designate a new property outside of the object)
+
+Your objects can include basically anything you want!  
+But they're used to include properties and values together.
+
+You MUST supply a value to a property within an object, even if it's "undefined" or "null";
+
+
+The DOT NOTATION is used to access properties within an object
+
+You can also use BRACKET NOTATION.  It's only really used to get a property (KEY) with spaces in it.
+	You must out quotes around a property name that includes a space!
+	If you're using BRACKET NOTATION, however, you need to use quotes WHETHER OR NOT IT INCLUDES SPACES
+
+
+
+!  Check out callback function
+
+"RETURN" tells javascript to stop executing the function right there, and/to return a value.
+
+
+
+If a line starts with "function", it's a declaration.
+
+If "function" is somewhere on the right side of the line, it's a function "expression"
+
+"anonymous functions" are functions that are declared on the fly to be used only once.  They aren't declared;
+they use the function expression.
+
+
+
+"Global" variables or Global Scope are ones that are outside of function codes, and therefore, can be used in anything
+
+The other is "functional" variables or functional scope are variables that exist only within functions.
+
+
+
+
+D O M - Document-Object Model - Can be used to edit the html in realtime!
+
+In this, the Document is the object.
+
+
+document.createElement - can create new elements on the fly
+
+aTargetHtmlVariable.appendChild(newHtmlVariableYouWantToAddAsChild) - Can be used to add a child to 
+a selected HTML target
+
+aTargetHtmlVariable.setAttributes("a-css-class", "another-css-class"); - can be used to apply css class styles
+to a target html element
+
+
+You can't change variable names dynamically by using a js loop
+
+
+
+A CALLBACK FUNCTION is a function that gets passed into another function as an argument.
+	aFunctionName(aCallbackFunction());
+or 
+	var aCallbackFunction = aFunctionName();
+	aCallbackFunction();
+
+
+ECLOSURE - A variable or function having access to its lexical scope even though it's being called outside
+of its lexical scope.
+
+
+Within a function scope, "return previousNestedFunctionName" will pass the information into the parent
+function.
+
+
+
+The THIS keyword is a contextual reference in javascript.  It has different values depending on the where
+or you reference it.
+
+
+In js, the browser "window" is an object.  If you use console.log(this) with no other context, 
+it's going to log the window.
+
+
+
+BOOLEANS ARE GOOD PLEASE REMEMBER BOOLEANS
+
+
+//  Timeouts in JavaScript
+      //  Set our window alert to run one second after the function's called.
+      var windowTimeout = setTimeout(function() {
+        alert("Alert #1");
+      }, 1000);
+
+      //  Cancel on click.
+      $("#cancel").on("click", function() {
+        // Clear the button alert's timeout.
+        clearTimeout(delayButtonAlert);
+      });
+
+      //  Cancel window alert on click.
+      $("#window-cancel").on("click", function() {
+        //  Clear the timeout, and stop the window alert.
+        clearTimeout(windowTimeout);
+      });   
+
+
+REPEAT AFTER ME
+setTimeout
+clearTimeout
+
+var thisWindowWillPopUpAfterThreeSeconds = setTimeout(function() {
+stuff the will happen in 3 seconds;
+}, 3000);
+
+setTimeOut will default to the WINDOW OBJECT!  Even if you specify what you're actually inside of it.
+You can only call globals!
+
+
+You can use setTimeout to call other functions.
+setTimeout(fiveSeconds, 5000);
+
+THe only advantage to setting a setTimeout as a variable is so that you can clear it with clearTimeout
+
+WHILE LOOPS are used for boolean conditions!

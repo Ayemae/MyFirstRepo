@@ -1,0 +1,70 @@
+JSON AND APIs
+
+
+
+An ALGORITHM is a set of steps to find a solution to a specific problem
+>> It's great if you can find the solution to a singular instance, but how does that solution scale?
+>> An algorithm is like a formula.  It's usually run once.
+
+On the other hand, a PROGRAM is made to execute functions continuously
+
+
+JSON - Javascript Object Notation
+JSON can access the server :o
+
+API - Application Programming Interface
+APIs give developers access to systems they normally would not have access to.
+~  R E A D   T H E   D O C U M E N T A T I O N  ~
+You're playing by someone else's rules, so make sure you know those rules!
+
+jQuery is essentially an API?
+
+END POINT - where you can access a website's API
+
+
+"/?" in a URL is a query string!! This denotes parameters that we're addinhg to the page request
+After the first ?, use & to add more parameters
+
+
+AJAX - Asynchronice Javascript And XML
+It's called "asynchronice" because it doesn't stop the javascript so that it can load within it. It 
+will go on and execute separately!
+
+You call ajax using jQuery:
+$.ajax()
+
+
+You MUST supply a method when you execute an AJAX request!!
+Some methods include: "GET", "POST"
+
+// constructing a queryURL variable we will use instead of the literal string inside of the ajax method
+    var title = "space+jam";
+    var queryURL = "https://www.omdbapi.com/?t=" + title + "&y=&plot=short&apikey=trilogy";
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+      console.log(response);
+      console.log(response.Runtime);
+    });
+
+
+You need jQuery to use AJAX!
+
+The vanilla js version is something like:
+
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "www.aURL.com/?with=parameters");
+xhr.send(null);
+xhr.onreadystatechange = function() {
+if () {}
+}
+
+With APIs, you MUST know the data you are retrieving!!
+
+If you make several ajax calls, they're not necessarily going to print in the order you sent them due to
+ajax's achronicity.
+If you want them to print in an order, you need to send them to specified html elements.
+
+

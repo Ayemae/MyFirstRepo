@@ -1,0 +1,71 @@
+BOOTSTRAP
+
+
+Framework -  A pre-built (css?) template
+
+Must have CDN (Content Delivery Network) link to utilize Bootstrap
+
+If you want JS, you need to also include the JS links
+
+Can incorporate carosel sliders. :o
+
+popper.js is required for bootstrap 4
+
+
+DON'T FORGET TO LINK YOUR BOOTSTRAP STYLE SHEET!
+
+Bootstrap only uses divs, no semantic elements (such as "section")
+
+
+GRIDS
+
+
+The Bootstrap framework workss on a grid systems
+
+Bootstrap uses 12 columns
+
+Containers wrap around the whole grid
+
+Rows are defined first within the container (before columns)
+
+Colummns are defined within rows
+
+Columns must NOT total to more than 12!  It can total to LESS, but no more!
+
+
+
+<div class="container">
+	
+	<div class="row">
+
+		<div class="col-md-#">
+
+
+
+The 'md' stands for "medium" as in "medium screen size"
+
+You can also use "sm" ("small"?)
+
+If you want, you don't have to specific the number of columns to span-- you can just use the class "col" and
+bootstrap will figure out the width based on how many "col" classes you've placed within the row.
+
+You CAN use more than 1 container!
+
+You can adjust the class .emptyDivs to fill blank space
+
+If you don't want your ".container" to be padded+centered, you can used ".container-fluid" instead to fill the whole window.
+
+SUB-ROWS can be identified within columns
+
+SUB-COLUMNS can be identified within sub-rows
+
+
+
+
+There are other css Frameworks, such as Materialize
+
+
+
+
+
+LOOK UP FLEXBOX AND CSS GRID

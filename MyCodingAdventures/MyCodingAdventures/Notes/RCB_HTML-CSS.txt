@@ -1,0 +1,68 @@
+HTML TERMS
+
+'..' means move ONE folder up
+
+'a' is for anchor
+
+HTML tags are also known as elements
+
+Attributes are the traits added to an HTML element, such as "href" or "src"
+
+'Values' are added to attributes, such as the URL within "href" or "src"
+
+All attributes are added to the opening tag
+
+
+CSS TERMS
+
+Selectors: HTML elements(tags), class and id names
+
+Declaration start, Declaration end: The container within which a selector's properties are listed
+
+Properties: All traits added to a CSS selector, such as "color" or "margin"
+
+Value: The spicifications of the property (such as the color, number of pixels, etc)
+
+Declaration separator: The semi-colon that distinguishes the end of a property+value
+
+ IDs always take priority over regular classes
+
+
+Clearfix -
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+
+"box-sizing: border-box;" property: makes the padding and border part of your assigned widths/heights! 
+
+This is called a media query! "@media screen and (max-width: 600px)"
+
+There is a media query to change how a document prints!  @print
+
+
+'@' stuff inserted into the css are calling a method within css, such as @import and @font-face
+
+
+
+
+Google Chrome's native style sheet is "user agent stylesheet"
+All browers have their own native sheetsheet defaults
+
+"Reset.css" or "Normalize.css" is to "reset" all browser-specific css.
+
+
+
+SEO = Search Engine Optimization
+
+
+
+
+FOR VISUAL STUDIO CODE:
+You can use shift+alt to copy and duplicate a format, such as bolded list items
+
+CMD+/  OR CRTL+/ = comment out a line of code in CSS

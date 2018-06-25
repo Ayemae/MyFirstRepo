@@ -1,0 +1,21 @@
+a {
+    font-size: 22px;
+    color: indigo;
+    text-decoration: none;
+}
+
+a:hover {
+    color: purple;
+}
+
+a:active {
+    color: magenta;
+}
+
+a:visited {
+    color: blue;
+}
+
+.links a:nth-child(3) {
+    color: pink;
+}

@@ -1,0 +1,27 @@
+DATA PERSISTENCE
+
+Data that has significant size would be stored on the server-side
+
+Strings are saved on the client side
+
+localStorage.clear(); will clear local storage
+
+.setItem is used to store properties
+
+Local Storage can be found within the Application tab in the Chrome Inspect
+It's specific to the brower and the page
+If you clear local storage, it's only cleared for that page
+
+Cookies are useful because they are compatible with every browser
+
+A cookie is basically just a semi-colon delimited string.  
+All values in a cookie are delimited by a semi-colon
+
+Cookies need an expiration date!
+
+
+DO NOT EVER SAVE A USERNAME AND PASSWORD IN LOCAL STORAGE OR COOKIES
+
+You can add as many values as you want to a cookie and they will be stored as a string
+
+utilize document.cookie function
